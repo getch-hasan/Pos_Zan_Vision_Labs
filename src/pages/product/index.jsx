@@ -1,3 +1,4 @@
+import Category from "./Category/Category"
 
 
 export const Product = () => {
@@ -5,6 +6,8 @@ export const Product = () => {
   
 
     return <>
-        <div>this is product</div>
+        <div>
+            <Category></Category>
+        </div>
     </>
 }

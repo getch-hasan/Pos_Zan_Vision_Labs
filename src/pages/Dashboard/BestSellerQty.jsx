@@ -3,7 +3,7 @@ import React from 'react';
 const BestSellerQty = () => {
   return (
     <div>
-      <div className="overflow-x-auto border border-[#7c5cc4] rounded-lg shadow-lg mt-5">
+      <div className="overflow-x-auto border  border-[#7c5cc4] rounded-lg shadow-lg mt-5">
         <div className='flex justify-between px-5 py-3 font-semibold'>
           <div>
             <h1>Best Seller January</h1>

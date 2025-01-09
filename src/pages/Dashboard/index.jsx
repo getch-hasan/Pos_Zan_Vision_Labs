@@ -114,7 +114,7 @@ export const Dashboard = () => {
         <YearlyReportChart></YearlyReportChart>
       </div>
       {/* transaction table */}
-      <div className="grid grid-cols-1 lg:grid-cols-7 gap-5 ">
+      <div className="grid grid-cols-1 lg:grid-cols-7 lg:gap-5">
             <div className="col-span-4">
            <ProductTableWithTabs></ProductTableWithTabs>
             </div>

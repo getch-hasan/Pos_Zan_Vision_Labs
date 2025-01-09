@@ -14,13 +14,16 @@ const appRoutes = [
             { path: "*", element: <Navigate to="/404" /> },
             // dashboard
             {path:"",element:<Dashboard/>},
+
+            /** product */
+            { path: "product", element:  <Product /> },
+            { path: "product/category", element:  <Product /> },
                        
             /** category */
             { path: "category", element: <CategoryList /> },
          
 
-            /** product */
-            { path: "product", element:  <Product /> },
+         
        
         ],
     },

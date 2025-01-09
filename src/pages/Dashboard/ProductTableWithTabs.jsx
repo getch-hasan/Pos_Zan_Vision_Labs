@@ -27,7 +27,7 @@ const TabbedTable = () => {
   };
 
   return (
-    <div className="border border-[#7c5cc4] rounded-lg mt-5 z-10 shadow-lg pb-1">
+    <div className="border border-[#7c5cc4] rounded-lg mt-5 shadow-lg overflow-auto ">
 
       <div className='flex justify-between px-5 py-3 font-semibold '>
         <h1>{activeTab} Information</h1>
@@ -51,7 +51,7 @@ const TabbedTable = () => {
       <hr />
 
       {/* Table Section */}
-      <div className="overflow-x-auto shadow-lg ">
+      <div className=" shadow-lg ">
 
 
         {/* Table with dynamic headers and data */}
@@ -66,8 +66,8 @@ const TabbedTable = () => {
           </thead>
           {/* Dynamic Body */}
           <tbody className=''>
-            {data[activeTab]?.map((item, index) => (
-              <tr key={index} className="even:bg-gray-50 ">
+            {data[activeTab]?.map((item, index) =>(
+              <tr key={index} className=" ">
                 <td>{item.date}</td>
                 <td>{item.reference}</td>
                 {activeTab === 'Sale' && (
@@ -90,58 +90,6 @@ const TabbedTable = () => {
         </table>
       </div>
     </div>
-    // <div>
-    //   <div className="overflow-auto border border-[#7c5cc4] rounded-lg shadow-lg mt-5">
-    //     {/* Header Section */}
-    //     <div className='flex justify-between px-5 py-3 font-semibold'>
-    //       <div>
-    //         <h1>Best Seller January</h1>
-    //       </div>
-    //       <button className="bg-[#7c5cc4] px-2 text-white text-xs rounded-md">Top-5</button>
-    //     </div>
-    //     <hr />
-
-    //     {/* Table Section with border fix */}
-    //     <div className="overflow-x-auto">
-    //       <table className="table table-fixed w-full border-collapse ">
-    //         {/* Head */}
-    //         <thead className='text-sm bg-gray-200'>
-    //           <tr>
-    //             <th className="w-3/4 p-2 text-left">Product Details</th>
-    //             <th className="w-1/4 p-2 text-left">Qty</th>
-    //           </tr>
-    //         </thead>
-    //         {/* Body */}
-    //         <tbody>
-    //           {[...Array(3)].map((_, index) => (
-    //             <tr key={index} className="even:bg-gray-100">
-    //               <td className="p-2 ">
-    //                 <div className="flex items-center gap-2">
-    //                   {/* Image Section */}
-    //                   <div className="avatar">
-    //                     <div className="h-[25px] w-[30px] rounded-sm">
-    //                       <img
-    //                         src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-    //                         alt="Avatar Tailwind CSS Component"
-    //                       />
-    //                     </div>
-    //                   </div>
-    //                   {/* Product Details Section */}
-    //                   <div>
-    //                     <div className="">
-    //                       Zenbook 14 OLED (UX3402)｜Laptops For Home – ASUS [59028109]
-    //                     </div>
-    //                   </div>
-    //                 </div>
-    //               </td>
-    //               <td className="p-2 ">1</td>
-    //             </tr>
-    //           ))}
-    //         </tbody>
-    //       </table>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

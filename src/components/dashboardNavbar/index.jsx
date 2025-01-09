@@ -21,7 +21,7 @@ export const Header = ({ sidebarOpen, setSidebarOpen }) => {
 
   return (
     <>
-      <div className="bg-blue-50 sticky top-0    ">
+      <div className="bg-blue-50 sticky top-0 z-50   ">
         <div className="bg-blue-50" style={gradientStyle}>
           <div className="navbar rounded-lg  px-10">
             {/* responsive navbar start */}

@@ -1,8 +1,9 @@
 import { RxDashboard } from "react-icons/rx";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { RiGalleryFill, RiProductHuntLine } from "react-icons/ri";
-import { FaFirstOrder, FaUnity } from "react-icons/fa";
+import { FaUnity } from "react-icons/fa";
 import { CgAttribution } from "react-icons/cg";
+import { HiBars3 } from "react-icons/hi2";
 import {
   MdOutlineProductionQuantityLimits,
   MdBrandingWatermark,
@@ -16,9 +17,15 @@ export const menuData = [
     path: "/dashboard",
   },
   {
-    title: "Order",
-    icon: <FaFirstOrder />,
-    path: "/dashboard/order",
+    title: "Product",
+    icon: <HiBars3 />,
+    childrens: [
+      {
+        title: "Category",
+        icon: <IoColorPaletteOutline />,
+        path: "/dashboard/product/category",
+      },
+    ]
   },
   {
     title: "Banner",
