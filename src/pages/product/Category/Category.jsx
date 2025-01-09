@@ -2,6 +2,7 @@ import React from 'react';
 import AddButton from '../../../components/button/AddButton';
 import ImportButton from '../../../components/button/ImportButton';
 import CategoryButtons from './CategoryButtons';
+import CategoryTable from './CategoryTable';
 
 const Category = () => {
   return (
@@ -13,6 +14,7 @@ const Category = () => {
         </div>
         <div className='mt-5'>
           <CategoryButtons></CategoryButtons>
+          <CategoryTable></CategoryTable>
         </div>
       </div>
     </>

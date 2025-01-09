@@ -8,6 +8,7 @@ import { RxCross2 } from "react-icons/rx";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 
+
 const CategoryButtons = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -60,31 +61,31 @@ const CategoryButtons = () => {
      
           <div>
             <div className="flex gap-2 ">
-              <button className="flex items-center gap-2 bg-[#ff7588] hover:bg-[#868e96] text-white px-4 py-2 rounded-l-md ">
+              <button className="flex items-center gap-2 bg-[#ff7588] hover:bg-[#868e96] text-white px-2 py-1 lg:px-4 lg:py-2 rounded-l-md ">
                 <FaFilePdf className="w-5 h-5" />
 
               </button>
 
-              <button className="flex items-center gap-2 bg-[#868e96] hover:bg-[#868e96] text-white px-4 py-2 ">
+              <button className="flex items-center gap-2 bg-[#868e96] hover:bg-[#868e96] text-white px-2 py-1 lg:px-4 lg:py-2 ">
                 <FaRegFileExcel className="w-5 h-5" />
 
               </button>
 
-              <button className="flex items-center gap-2 bg-[#ffc107] hover:bg-[#868e96]  text-white px-4 py-2 ">
+              <button className="flex items-center gap-2 bg-[#ffc107] hover:bg-[#868e96]  text-white px-2 py-1 lg:px-4 lg:py-2 ">
                 <BsFiletypeCsv className="w-5 h-5" />
 
               </button>
 
-              <button className="flex items-center gap-2 bg-[#2196f3] hover:bg-[#868e96] text-white px-4 py-2 ">
+              <button className="flex items-center gap-2 bg-[#2196f3] hover:bg-[#868e96] text-white px-2 py-1 lg:px-4 lg:py-2 ">
                 <IoMdPrint className="w-5 h-5" />
               </button>
 
-              <button className="flex items-center gap-2 bg-[#eb543a] hover:bg-[#868e96] text-white px-4 py-2 ">
+              <button className="flex items-center gap-2 bg-[#eb543a] hover:bg-[#868e96] text-white px-2 py-1 lg:px-4 lg:py-2 ">
                 <RxCross2 className="w-5 h-5" />
               </button>
 
               <div className='relative inline-block'>
-                <button onClick={toggleBox} className="flex items-center  rounded-r-md bg-[#7c5cc4] text-white px-4 py-2 ">
+                <button onClick={toggleBox} className="flex items-center  rounded-r-md bg-[#7c5cc4] hover:bg-[#868e96] text-white px-2 py-1 lg:px-4 lg:py-2 ">
 
                   <MdOutlineRemoveRedEye className="w-5 h-5" />
                   <IoMdArrowDropdown className="w-5 h-5" />
