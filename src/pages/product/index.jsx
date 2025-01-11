@@ -8,6 +8,7 @@ export const Product = () => {
     return <>
         <div>
             <Category></Category>
+
         </div>
     </>
 }

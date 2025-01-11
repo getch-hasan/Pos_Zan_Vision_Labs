@@ -5,6 +5,7 @@ import { Navigate } from "react-router-dom"
 import { CategoryList } from '../pages/category/index'
 import { DashboardLayout } from "../layouts/dashboard.layout"
 import { Dashboard } from "../pages/Dashboard"
+import ProductList from "../pages/product/ProductList/ProductList"
 
 const appRoutes = [
     {
@@ -18,6 +19,7 @@ const appRoutes = [
             /** product */
             { path: "product", element:  <Product /> },
             { path: "product/category", element:  <Product /> },
+            { path: "product/product-list", element:  <ProductList/>},
                        
             /** category */
             { path: "category", element: <CategoryList /> },

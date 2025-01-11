@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { FaBell, FaChartBar, FaCog, FaEnvelope, FaHome, FaUser } from 'react-icons/fa';
 import { FaFilePdf } from "react-icons/fa";
@@ -9,14 +10,14 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 
-const CategoryButtons = ({ clickData, handleButtonClick }) => {
- const [isOpen, setIsOpen] = useState(false);
+const ProductButtons = ({ clickData, handleButtonClick }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleBox = () => {
     setIsOpen(!isOpen);
   };
 
-  const buttons = ["Category", "Parent Category", "Number Of Product", "Stock Quantity", "Stock Worth", "Action"]; 
+  const buttons = ["Image", "Name", "Code", "Brand", "Category", "Quantity","Unit","Price","Cost","Stock Worth(Price/Cost)","Action"];
   return (
     <div className='flex flex-col md:flex-row md:justify-between lg:items-center gap-3'>
       {/* select option */}
@@ -118,4 +119,4 @@ const CategoryButtons = ({ clickData, handleButtonClick }) => {
   );
 };
 
-export default CategoryButtons;
+export default ProductButtons;

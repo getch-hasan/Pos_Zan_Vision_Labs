@@ -22,8 +22,13 @@ export const menuData = [
     childrens: [
       {
         title: "Category",
-        icon: <IoColorPaletteOutline />,
+        icon: <RxDashboard />,
         path: "/dashboard/product/category",
+      },
+      {
+        title: "Product List",
+        icon: <RxDashboard />,
+        path: "/dashboard/product/product-list",
       },
     ]
   },
