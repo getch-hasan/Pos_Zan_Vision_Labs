@@ -20,7 +20,7 @@ const ProductTable = ({ clickData }) => {
   const tableData = [
     {
       "id": 1,
-      "Image": "https://via.placeholder.com/150",
+      "Image": "https://img.daisyui.com/images/profile/demo/2@94.webp",
       "Name": "Product A",
       "Code": "A123",
       "Brand": "BrandX",
@@ -34,7 +34,7 @@ const ProductTable = ({ clickData }) => {
     },
     {
       "id": 2,
-      "Image": "https://via.placeholder.com/150",
+      "Image": "https://img.daisyui.com/images/profile/demo/2@94.webp",
       "Name": "Product B",
       "Code": "B456",
       "Brand": "BrandY",
@@ -48,7 +48,7 @@ const ProductTable = ({ clickData }) => {
     },
     {
       "id": 3,
-      "Image": "https://via.placeholder.com/150",
+      "Image": "https://img.daisyui.com/images/profile/demo/2@94.webp",
       "Name": "Product C",
       "Code": "C789",
       "Brand": "BrandZ",
@@ -62,7 +62,7 @@ const ProductTable = ({ clickData }) => {
     },
     {
       "id": 4,
-      "Image": "https://via.placeholder.com/150",
+      "Image": "https://img.daisyui.com/images/profile/demo/2@94.webp",
       "Name": "Product D",
       "Code": "D101",
       "Brand": "BrandX",
@@ -76,7 +76,7 @@ const ProductTable = ({ clickData }) => {
     },
     {
       "id": 5,
-      "Image": "https://via.placeholder.com/150",
+      "Image": "https://img.daisyui.com/images/profile/demo/2@94.webp",
       "Name": "Product E",
       "Code": "E202",
       "Brand": "BrandY",
@@ -89,139 +89,155 @@ const ProductTable = ({ clickData }) => {
       "Action": "Edit/Delete"
     }
   ]
-  
+
 
 
 
   return (
     <>
-    <div className="overflow-auto">
-      <table className="table">
-        {/* head */}
-        <thead>
-          <tr>
-            <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
-            </th>
-            {!clickData.includes("Category") ? <th>Category</th> : <th></th> }
-            {!clickData.includes("Parent Category") ? <th>Parent Category</th> : <th></th>}
-            {!clickData.includes("Number Of Product") ? <th>Number Of Product</th> : <th></th>}
-            {!clickData.includes("Stock Quantity") ? <th>Stock Quantity</th> :<th></th>}
-            {!clickData.includes("Stock Worth") ? <th>Stock Worth</th> :<th></th>}
-            {!clickData.includes("Action") ? <th>Action</th> :<th></th>}
+      <div className="overflow-auto">
+        <table className="table">
+          {/* head */}
+          <thead>
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" className="checkbox" />
+                </label>
+              </th>
+              {!clickData.includes("Image") ? <th>Image</th> : <th></th>}
+              {!clickData.includes("Name") ? <th>Name</th> : <th></th>}
+              {!clickData.includes("Code") ? <th>Code</th> : <th></th>}
+              {!clickData.includes("Brand") ? <th>Brand</th> : <th></th>}
+              {!clickData.includes("Category") ? <th>Category</th> : <th></th>}
+              {!clickData.includes("Quantity") ? <th>Quantity</th> : <th></th>}
+              {!clickData.includes("Unit") ? <th>Unit</th> : <th></th>}
+              {!clickData.includes("Price") ? <th>Price</th> : <th></th>}
+              {!clickData.includes("Cost") ? <th>Cost</th> : <th></th>}
+              {!clickData.includes("Stock Worth(Price/Cost)") ? <th>Stock Worth(Price/Cost)</th> : <th></th>}
+              {!clickData.includes("Action") ? <th>Action</th> : <th></th>}
 
-          </tr>
-        </thead>
+            </tr>
+          </thead>
 
-        {
-          tableData.map((singleData, index) => (
+          {
+            tableData.map((singleData, index) => (
 
-            <tbody key={singleData.id}>
-              {/* row 1 */}
-              <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
-                <td>
-                  <div className="flex items-center gap-3">
-                    <div className="avatar">
-                      <div className="rounded-md h-12 w-12">
+              <tbody key={singleData.id}>
+                {/* row 1 */}
+                <tr>
+                  <th>
+                    <label>
+                      <input type="checkbox" className="checkbox" />
+                    </label>
+                  </th>
+
+                  <td>
+                    <div className='avatar'>
+                      <div className='rounded-md h-12 w-12'>
                         { // Check if 'Category' is NOT in clickData
-                          !clickData.includes("Category") && singleData.image && (
+                          !clickData.includes("Image") && singleData.Image && (
                             <img
-                              src={singleData.image}
+                              src={singleData.Image}
                               alt="Avatar Tailwind CSS Component"
                             />
                           )
                         }
                       </div>
                     </div>
-                    <div>
-                      <div className="font-bold">{!clickData.includes("Category") && <td>{singleData.category}</td>}</div>
-                    </div>
-                  </div>
-                </td>
-                <td>
+                  </td>
+                  <td>
+                    {!clickData.includes("Name") && <td>{singleData.Name}</td>}
+                  </td>
+                  <td>
 
 
-                  {!clickData.includes("Parent Category") && <td>{singleData.category}</td>}
-                </td>
-                <td>
-                  {!clickData.includes("Number Of Product") && <td>{singleData.numberOfProducts}</td>}
-                </td>
+                    {!clickData.includes("Code") && <td>{singleData.Code}</td>}
+                  </td>
+                  <td>
+                    {!clickData.includes("Brand") && <td>{singleData.Brand}</td>}
+                  </td>
 
-                <td>
-                  {!clickData.includes("Stock Quantity") && <td>{singleData.stockQuantity}</td>}
-                </td>
+                  <td>
+                    {!clickData.includes("Category") && <td>{singleData.Category}</td>}
+                  </td>
+                  <td>
+                    {!clickData.includes("Quantity") && <td>{singleData.Quantity}</td>}
+                  </td>
 
-                <td>
-                  {!clickData.includes("Stock Worth") && <td>{singleData.stockWorth}</td>}
-                </td>
+                  <td>
+                    {!clickData.includes("Unit") && <td>{singleData.Unit}</td>}
+                  </td>
+                  <td>
+                    {!clickData.includes("Price") && <td>{singleData.Price}</td>}
+                  </td>
+                  <td>
+                    {!clickData.includes("Cost") && <td>{singleData.Cost}</td>}
+                  </td>
+                  <td>
+                    {!clickData.includes("Stock Worth(Price/Cost)") && <td>{singleData["Stock Worth"]}</td>}
+                  </td>
 
-                <td>
-                  {!clickData.includes("Action") && <>
-                    <div className='relative inline-block'>
-                      <button onClick={() => toggleBox(index)} className="flex items-center border border-[#7c5cc4] text-[#7c5cc4] rounded-r-m  px-2 py-1 lg:px-4 lg:py-2 z-0 ">
-                        Action
-                        <IoMdArrowDropdown className="w-5 h-5" />
-                      </button>
+                  <td>
+                    {!clickData.includes("Action") && <>
+                      <div className='relative inline-block'>
+                        <button onClick={() => toggleBox(index)} className="flex items-center border border-[#7c5cc4] text-[#7c5cc4] rounded-r-m  px-2 py-1 lg:px-4 lg:py-2 z-0 ">
+                          Action
+                          <IoMdArrowDropdown className="w-5 h-5" />
+                        </button>
 
-                      {openIndex === index && (
-                        <div className="absolute top-[30px] mt-2  right-0  p-4  border border-gray-300 shadow-lg rounded-md space-y-1 z-30 bg-white">
+                        {openIndex === index && (
+                          <div className="absolute top-[30px] mt-2  right-0  p-4  border border-gray-300 shadow-lg rounded-md space-y-1 z-30 bg-white">
 
-                          <button
-                            className="bg-white text-[#7c5cc4] px-4 py-2 border w-24  rounded-md flex items-center gap-2"
-                          >
-                            <FaRegEdit />
-                            Edit
-                          </button>
-                          <button
-                            className="bg-white text-[#7c5cc4] px-4 py-2 border w-24  rounded-md flex items-center gap-2"
-                          >
-                            <MdOutlineDeleteOutline />
-                            Delete
-                          </button>
+                            <button
+                              className="bg-white text-[#7c5cc4] px-4 py-2 border w-24  rounded-md flex items-center gap-2"
+                            >
+                              <FaRegEdit />
+                              Edit
+                            </button>
+                            <button
+                              className="bg-white text-[#7c5cc4] px-4 py-2 border w-24  rounded-md flex items-center gap-2"
+                            >
+                              <MdOutlineDeleteOutline />
+                              Delete
+                            </button>
 
-                        </div>
-                      )}
-                    </div>
-                  </>}
-                </td>
+                          </div>
+                        )}
+                      </div>
+                    </>}
+                  </td>
 
-              </tr>
+                </tr>
 
-            </tbody>
-          ))
-        }
-
-
-      </table>
+              </tbody>
+            ))
+          }
 
 
-    </div>
-          {/* pagination */}
-          <div className='flex flex-wrap items-center justify-between mt-20'>
-          <div>
-            <p className='mb-2'>Showing 1-10(38)</p>
-          </div>
-          <div>
-            <span className="inline-flex border border-[#6c757d] rounded-sm overflow-hidden">
-              <button className="px-4 py-2 border border-r-[#6c757d] "><FaArrowLeft /></button>
-              <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">1</button>
-              <button className="px-4 py-2 btn-active border border-r-[#6c757d] hover:bg-[#6c757d]">2</button>
-              <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">3</button>
-              <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">4</button>
-              <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">5</button>
-              <button className="px-4 py-2"><FaArrowRight /></button>
-            </span>
-  
-          </div>
+        </table>
+
+
+      </div>
+      {/* pagination */}
+      <div className='flex flex-wrap items-center justify-between mt-20'>
+        <div>
+          <p className='mb-2'>Showing 1-10(38)</p>
         </div>
-        </>
+        <div>
+          <span className="inline-flex border border-[#6c757d] rounded-sm overflow-hidden">
+            <button className="px-4 py-2 border border-r-[#6c757d] "><FaArrowLeft /></button>
+            <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">1</button>
+            <button className="px-4 py-2 btn-active border border-r-[#6c757d] hover:bg-[#6c757d]">2</button>
+            <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">3</button>
+            <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">4</button>
+            <button className="px-4 py-2 border border-r-[#6c757d] hover:bg-[#6c757d]">5</button>
+            <button className="px-4 py-2"><FaArrowRight /></button>
+          </span>
+
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -1,11 +1,11 @@
 import { FaUsers } from "react-icons/fa";
-import LineChart from "./LineChart";
-import YearlyReportChart from "./YearlyReportChart";
-import InformationMonths from "./InformationMonths";
-import BestSellerTable from "./BestSellerTable";
-import BestSellerQty from "./BestSellerQty";
-import BestSellerPrice from "./BestSellerPrice";
-import ProductTableWithTabs from "./ProductTableWithTabs";
+import LineChart from "./Components/LineChart";
+import YearlyReportChart from "./Components/YearlyReportChart";
+import InformationMonths from "./Components/InformationMonths";
+import BestSellerTable from "./Components/BestSellerTable";
+import BestSellerQty from "./Components/BestSellerQty";
+import BestSellerPrice from "./Components/BestSellerPrice";
+import ProductTableWithTabs from "./Components/ProductTableWithTabs";
 
 export const Dashboard = () => {
   return (

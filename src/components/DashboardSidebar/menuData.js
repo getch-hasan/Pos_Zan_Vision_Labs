@@ -30,6 +30,11 @@ export const menuData = [
         icon: <RxDashboard />,
         path: "/dashboard/product/product-list",
       },
+      {
+        title: "Add Product",
+        icon: <RxDashboard />,
+        path: "/dashboard/product/add-product",
+      },
     ]
   },
   {

@@ -20,6 +20,7 @@ const appRoutes = [
             { path: "product", element:  <Product /> },
             { path: "product/category", element:  <Product /> },
             { path: "product/product-list", element:  <ProductList/>},
+            { path: "product/product-list", element:  <ProductList/>},
                        
             /** category */
             { path: "category", element: <CategoryList /> },
