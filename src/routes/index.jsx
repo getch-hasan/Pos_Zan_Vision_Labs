@@ -6,6 +6,7 @@ import { CategoryList } from '../pages/category/index'
 import { DashboardLayout } from "../layouts/dashboard.layout"
 import { Dashboard } from "../pages/Dashboard"
 import ProductList from "../pages/product/ProductList/ProductList"
+import AddProduct from "../pages/product/AddProduct/AddProduct"
 
 const appRoutes = [
     {
@@ -20,7 +21,7 @@ const appRoutes = [
             { path: "product", element:  <Product /> },
             { path: "product/category", element:  <Product /> },
             { path: "product/product-list", element:  <ProductList/>},
-            { path: "product/product-list", element:  <ProductList/>},
+            { path: "product/add-product", element:  <AddProduct/>},
                        
             /** category */
             { path: "category", element: <CategoryList /> },
